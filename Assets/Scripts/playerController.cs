@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
-    Shoot shootScript;
+    
 
     //movement stuff
     public float speed;
@@ -37,7 +37,7 @@ public class playerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        shootScript = GetComponent<Shoot>();
+        
 
         if (speed <= 0)
         {
@@ -80,7 +80,7 @@ public class playerController : MonoBehaviour
             if (Input.GetButtonDown("Fire1") && curPlayingClip[0].clip.name != "Fire")
             {
                 anim.SetTrigger("Fire");
-                shootScript.Fire();
+                
             }
             else if (curPlayingClip[0].clip.name == "Fire")
                 rb.velocity = Vector2.zero;
