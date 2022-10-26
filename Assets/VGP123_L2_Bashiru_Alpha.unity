@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14976839}
   - component: {fileID: 14976840}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83437783}
   - component: {fileID: 83437784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93589899}
   - component: {fileID: 93589900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 144817216}
   - component: {fileID: 144817215}
   - component: {fileID: 144817214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154846411}
   - component: {fileID: 154846412}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 294359675}
   - component: {fileID: 294359674}
   - component: {fileID: 294359673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295774474}
   - component: {fileID: 295774475}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 302939817}
   - component: {fileID: 302939816}
   - component: {fileID: 302939815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309616393}
   - component: {fileID: 309616394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360522038}
   - component: {fileID: 360522039}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386009518}
   - component: {fileID: 386009519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -886,13 +887,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.4, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d1a9d5edd5978b4ca95d4f63e8ea7e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1196058666}
+  minXClamp: -0.45
+  maxXClamp: 181.4
 --- !u!1 &663375499
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +920,7 @@ GameObject:
   - component: {fileID: 663375502}
   - component: {fileID: 663375501}
   - component: {fileID: 663375500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,6 +983,37 @@ Transform:
   m_Father: {fileID: 1634755249}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &784992139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784992140}
+  m_Layer: 0
+  m_Name: spawnPointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784992140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784992139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1196058666}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &939914169
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 939914170}
   - component: {fileID: 939914171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1035,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014310384}
   - component: {fileID: 1014310385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1093,7 +1140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035814591}
   - component: {fileID: 1035814592}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1141,6 +1188,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.701004, y: 1.8362563}
   m_EdgeRadius: 0
+--- !u!1 &1047852331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1047852332}
+  m_Layer: 0
+  m_Name: spawnPointRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1047852332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047852331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1196058666}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1191055326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191055327}
   - component: {fileID: 1191055328}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,8 +1289,9 @@ GameObject:
   - component: {fileID: 1196058665}
   - component: {fileID: 1196058667}
   - component: {fileID: 1196058668}
-  - component: {fileID: 1196058669}
   - component: {fileID: 1196058670}
+  - component: {fileID: 1196058671}
+  - component: {fileID: 1196058672}
   m_Layer: 0
   m_Name: Mario
   m_TagString: Untagged
@@ -1283,7 +1362,10 @@ Transform:
   m_LocalPosition: {x: -5.34, y: 3.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1972828547}
+  - {fileID: 1047852332}
+  - {fileID: 784992140}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1307,7 +1389,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1196058668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1334,18 +1416,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1.12}
   m_EdgeRadius: 0
---- !u!114 &1196058669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196058664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9cbb12dffbf5d64f85500b56c9fa0f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1196058670
 Animator:
   serializedVersion: 4
@@ -1366,6 +1436,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1196058671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196058664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e789b78b3ad25049b0026c5ce02019d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1196058667}
+  speed: 0
+  jumpForce: 0
+  isGrounded: 0
+  groundCheck: {fileID: 1972828547}
+  isGroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckRadius: 0
+--- !u!114 &1196058672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196058664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a87665afc73044b96963420f5aac8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilespeed: 5
+  spawnPointRight: {fileID: 1047852332}
+  spawnPointLeft: {fileID: 784992140}
+  projectilePrefab: {fileID: 8564073781378350607, guid: 1ab9c1fffb4386f47917509af96585e4, type: 3}
 --- !u!1 &1214533849
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214533850}
   - component: {fileID: 1214533851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222616248}
   - component: {fileID: 1222616249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231347021}
   - component: {fileID: 1231347022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309633180}
   - component: {fileID: 1309633181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1609,7 +1716,7 @@ GameObject:
   - component: {fileID: 1326288392}
   - component: {fileID: 1326288393}
   - component: {fileID: 1326288394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,7 +1789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1327008992}
   - component: {fileID: 1327008993}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1443399662}
   - component: {fileID: 1443399663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1798,7 +1905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471489546}
   - component: {fileID: 1471489547}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1964,7 @@ GameObject:
   - component: {fileID: 1511926098}
   - component: {fileID: 1511926097}
   - component: {fileID: 1511926096}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1930,7 +2037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1524073103}
   - component: {fileID: 1524073104}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +2095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526363567}
   - component: {fileID: 1526363568}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2046,7 +2153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557335156}
   - component: {fileID: 1557335157}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2104,7 +2211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1563578430}
   - component: {fileID: 1563578431}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2163,7 +2270,7 @@ GameObject:
   - component: {fileID: 1599809232}
   - component: {fileID: 1599809231}
   - component: {fileID: 1599809230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2235,6 +2342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634755249}
+  - component: {fileID: 1634755250}
   m_Layer: 0
   m_Name: colliders
   m_TagString: Untagged
@@ -2293,6 +2401,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634755250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634755248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9cbb12dffbf5d64f85500b56c9fa0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1650180971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650180972}
   - component: {fileID: 1650180973}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2361,7 +2481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662733516}
   - component: {fileID: 1662733517}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2420,7 +2540,7 @@ GameObject:
   - component: {fileID: 1801182540}
   - component: {fileID: 1801182539}
   - component: {fileID: 1801182538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2482,6 +2602,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1634755249}
   m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1972828546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972828547}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: GroundCheck
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1972828547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972828546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1196058666}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021714118
 GameObject:
@@ -2577,7 +2728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028153021}
   - component: {fileID: 2028153022}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2636,7 +2787,7 @@ GameObject:
   - component: {fileID: 2038095832}
   - component: {fileID: 2038095831}
   - component: {fileID: 2038095830}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2709,7 +2860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2051248262}
   - component: {fileID: 2051248261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
