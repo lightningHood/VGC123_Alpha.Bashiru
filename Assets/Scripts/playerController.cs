@@ -25,6 +25,9 @@ public class playerController : MonoBehaviour
     public LayerMask isGroundLayer;
     public float groundCheckRadius;
 
+    //vairables 
+    
+
 
 
 
