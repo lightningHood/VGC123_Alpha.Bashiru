@@ -26,9 +26,35 @@ public class playerController : MonoBehaviour
     public float groundCheckRadius;
 
     //vairables 
-    
+    Coroutine jumpForceChange;
+    public int maxLives = 5;
+    private int _lives = 3;
+
+    public int lives
+    {
+        get { return _lives; }
+        set
+        {
+            //if (_lives > value)
+            //we lost a life - we should respawn
+
+            _lives = value;
+
+            if (_lives > maxLives)
+                _lives = maxLives;
+
+            //if (_lives < 0)
+            //gameover code goes here
+
+            Debug.Log("Lives have been set to: " + _lives.ToString());
+        }
+    }
 
 
+    public int GetLives()
+    {
+        return lives;
+    }
 
 
 

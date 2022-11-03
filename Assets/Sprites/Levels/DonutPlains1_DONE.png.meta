@@ -357,15 +357,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DonutPlains1_DONE_12
+      name: life
       rect:
         serializedVersion: 2
         x: 241
         y: 84
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.24195099, y: 0.49999952}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -415,9 +415,9 @@ TextureImporter:
       DonutPlains1_DONE_11: 1691917585
       DonutPlains1_DONE_9: -2134572501
       coinBlock: 1325518180
-      DonutPlains1_DONE_12: -1538491333
       level: 1545299320
       DonutPlains1_DONE_13: -272853640
+      life: -1538491333
       DonutPlains1_DONE_7: 1013578140
       coin: -1147953595
       DonutPlains1_DONE_6: 1833642168
