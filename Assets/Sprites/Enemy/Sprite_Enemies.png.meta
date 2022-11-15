@@ -7119,7 +7119,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: turret 1
+      name: turret fir
       rect:
         serializedVersion: 2
         x: 800
@@ -7140,7 +7140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: turret 2
+      name: turret fire
       rect:
         serializedVersion: 2
         x: 823
@@ -7161,7 +7161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: turret 3
+      name: turret fire 3
       rect:
         serializedVersion: 2
         x: 852
@@ -7182,7 +7182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: turret 4
+      name: turretIdle
       rect:
         serializedVersion: 2
         x: 881
@@ -9681,7 +9681,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy walk 1
+      name: koopa walk 1
       rect:
         serializedVersion: 2
         x: 27
@@ -9702,7 +9702,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy walk 2
+      name: koopa walk 2
       rect:
         serializedVersion: 2
         x: 46
@@ -14540,7 +14540,7 @@ TextureImporter:
         width: 3
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -14613,6 +14613,7 @@ TextureImporter:
       Sprite_Enemies_378: 328607693
       Sprite_Enemies_483: 1560588530
       Sprite_Enemies_134: 1295117800
+      turret fire 3: 1355301129
       Sprite_Enemies_275: 1136243583
       Sprite_Enemies_369: 378910363
       Sprite_Enemies_227: 1267057290
@@ -14689,6 +14690,7 @@ TextureImporter:
       Sprite_Enemies_442: 1085381674
       Sprite_Enemies_3: -822754215
       enemy idle: -2128879162
+      koopa walk 1: 982010143
       Sprite_Enemies_165: -1973265158
       Sprite_Enemies_525: -1139305401
       Sprite_Enemies_486: -1129506537
@@ -14700,7 +14702,6 @@ TextureImporter:
       Sprite_Enemies_462: -1295600010
       Sprite_Enemies_675: -580586999
       Sprite_Enemies_18: 257643945
-      enemy walk 2: 597530376
       Sprite_Enemies_230: 334888090
       Sprite_Enemies_79: 1818678380
       Sprite_Enemies_593: -741051545
@@ -14762,7 +14763,6 @@ TextureImporter:
       Sprite_Enemies_294: -2107213694
       Sprite_Enemies_661: -1377935356
       Sprite_Enemies_136: -968217318
-      enemy walk 1: 982010143
       Sprite_Enemies_145: 623394379
       Sprite_Enemies_253: 968479685
       Sprite_Enemies_532: 1518643074
@@ -14886,9 +14886,8 @@ TextureImporter:
       Sprite_Enemies_245: -1116658066
       Sprite_Enemies_74: -2040622314
       Sprite_Enemies_500: 1267518953
-      Sprite_Enemies_398: 1383874905
-      turret 2: -213141562
       Sprite_Enemies_465: 361709626
+      Sprite_Enemies_398: 1383874905
       Sprite_Enemies_65: -1060148378
       Sprite_Enemies_646: 1544237675
       Sprite_Enemies_485: 941451046
@@ -14914,7 +14913,6 @@ TextureImporter:
       Sprite_Enemies_265: 868198695
       Sprite_Enemies_218: -1146290667
       Sprite_Enemies_208: 1811966053
-      turret 3: 1355301129
       Sprite_Enemies_54: 791076102
       Sprite_Enemies_166: 1152517582
       Sprite_Enemies_270: -1000134819
@@ -15027,6 +15025,7 @@ TextureImporter:
       Sprite_Enemies_266: 314256890
       Sprite_Enemies_213: 1137003810
       Sprite_Enemies_479: 1053143918
+      turretIdle: -2083204921
       Sprite_Enemies_183: 1802088324
       Sprite_Enemies_556: 1897648380
       Sprite_Enemies_529: -1465980855
@@ -15038,6 +15037,7 @@ TextureImporter:
       Sprite_Enemies_629: 652081965
       Sprite_Enemies_259: -1466757003
       Sprite_Enemies_454: 1869653001
+      turret fire: -213141562
       Sprite_Enemies_15: -87716432
       Sprite_Enemies_243: -1870555150
       Sprite_Enemies_401: -1214764951
@@ -15056,6 +15056,7 @@ TextureImporter:
       Sprite_Enemies_295: -1152295161
       Sprite_Enemies_626: -2095562159
       Sprite_Enemies_474: 806750575
+      koopa walk 2: 597530376
       Sprite_Enemies_659: 1947854640
       Sprite_Enemies_100: -1123956905
       Sprite_Enemies_392: -73724798
@@ -15075,7 +15076,6 @@ TextureImporter:
       Sprite_Enemies_438: 886459535
       Sprite_Enemies_599: 680144436
       Sprite_Enemies_660: 1963248541
-      turret 4: -2083204921
       Sprite_Enemies_169: -614874516
       Sprite_Enemies_589: 2014211025
       Sprite_Enemies_501: 1548688336
@@ -15100,10 +15100,10 @@ TextureImporter:
       Sprite_Enemies_232: -1078580309
       Sprite_Enemies_499: -1757662706
       Sprite_Enemies_448: 2124170871
-      Sprite_Enemies_664: 1566948599
+      Sprite_Enemies_495: 761055828
       Sprite_Enemies_469: 321910766
       Sprite_Enemies_540: 1870432054
-      Sprite_Enemies_495: 761055828
+      Sprite_Enemies_664: 1566948599
       Sprite_Enemies_607: -904308082
       Sprite_Enemies_8: -927942790
       Sprite_Enemies_212: 358996702
@@ -15180,7 +15180,6 @@ TextureImporter:
       Sprite_Enemies_354: -1249030821
       Sprite_Enemies_159: 1402870488
       Sprite_Enemies_612: 764388017
-      turret 1: -348463975
       Sprite_Enemies_418: 728998733
       Sprite_Enemies_93: 898119420
       Sprite_Enemies_285: 1595233387
@@ -15263,6 +15262,7 @@ TextureImporter:
       Sprite_Enemies_424: -835248399
       Sprite_Enemies_595: 2848700
       Sprite_Enemies_84: 866543182
+      turret fir: -348463975
       Sprite_Enemies_584: -1915544661
       Sprite_Enemies_363: -912326398
       Sprite_Enemies_68: 1529225308

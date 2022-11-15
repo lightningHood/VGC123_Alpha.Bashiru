@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Shoot : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Shoot : MonoBehaviour
     public Transform spawnPointLeft;
 
     public Projectile projectilePrefab;
+
+    public UnityEvent OnProjectileSpawned;
+
 
 
     // Start is called before the first frame update
