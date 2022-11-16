@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Projectile : MonoBehaviour
 {
-    
-    public float lifetime;
 
+    public float lifetime;
 
     [HideInInspector]
     public float speed;
-
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,13 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.CompareTag("Wall"))
             Destroy(gameObject);
+
+        if (collision.gameObject.CompareTag("Enemy") && gameObject.CompareTag("PlayerProjectile"))
+        {
+            collision.gameObject.GetComponent<Enemy>().TakeDamage(1);
+            Destroy(gameObject);
+        }
     }
 }

@@ -23,7 +23,7 @@ public class EnemyWalker : Enemy
     {
         AnimatorClipInfo[] curClips = anim.GetCurrentAnimatorClipInfo(0);
 
-        if (curClips[0].clip.name == "Idle")
+        if (curClips[0].clip.name == "walk")
         {
             if (sr.flipX)
             {
@@ -39,7 +39,7 @@ public class EnemyWalker : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Barrier"))
+        if (collision.CompareTag("barrier"))
         {
             sr.flipX = !sr.flipX;
         }

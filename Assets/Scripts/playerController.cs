@@ -3,29 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(SpriteRenderer))]
-public class playerController : MonoBehaviour
-
-
+public class PlayerController : MonoBehaviour
 {
-
-    // components
-    public Rigidbody2D rb;
+    //components
+    Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
-    
 
     //movement stuff
     public float speed;
     public float jumpForce;
 
-
-    // groundcheck stuff
+    //groundcheck stuff
     public bool isGrounded;
     public Transform groundCheck;
     public LayerMask isGroundLayer;
     public float groundCheckRadius;
 
-    //vairables 
+    //variables
     Coroutine jumpForceChange;
     public int maxLives = 5;
     private int _lives = 3;
@@ -51,14 +46,30 @@ public class playerController : MonoBehaviour
     }
 
 
-    public int GetLives()
+    public void StartJumpForceChange()
     {
-        return lives;
+        if (jumpForceChange == null)
+        {
+            jumpForceChange = StartCoroutine(JumpForceChange());
+        }
+        else
+        {
+            StopCoroutine(jumpForceChange);
+            jumpForceChange = null;
+            jumpForce /= 2;
+            jumpForceChange = StartCoroutine(JumpForceChange());
+        }
     }
 
+    IEnumerator JumpForceChange()
+    {
+        jumpForce *= 2;
 
+        yield return new WaitForSeconds(5.0f);
 
-
+        jumpForce /= 2;
+        jumpForceChange = null;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -66,32 +77,30 @@ public class playerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        
 
         if (speed <= 0)
         {
             speed = 6.0f;
-            Debug.Log("Speed Not Set - Default To 6");
-
+            Debug.Log("Speed Not Set - Default to 6");
         }
+
         if (jumpForce <= 0)
         {
             jumpForce = 300;
-            Debug.Log("Jump Force Not Set - Default To 300");
-
+            Debug.Log("Jump Force Not Set - Default to 300");
         }
+
         if (!groundCheck)
         {
             groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").transform;
-            Debug.Log("Ground Check Not Set - Finding It Manually");
+            Debug.Log("Ground Check Not Set - Finding it Manually");
         }
 
         if (groundCheckRadius <= 0)
         {
-            groundCheckRadius = 0.02f;
-            Debug.Log("Ground Check Radius Not Set - Default To 0.2");
+            groundCheckRadius = 0.2f;
+            Debug.Log("Ground Check Radius Not Set - Default to 0.2");
         }
-
 
 
     }
@@ -107,10 +116,7 @@ public class playerController : MonoBehaviour
         if (curPlayingClip.Length > 0)
         {
             if (Input.GetButtonDown("Fire1") && curPlayingClip[0].clip.name != "Fire")
-            {
                 anim.SetTrigger("Fire");
-                
-            }
             else if (curPlayingClip[0].clip.name == "Fire")
                 rb.velocity = Vector2.zero;
             else
@@ -135,11 +141,10 @@ public class playerController : MonoBehaviour
         anim.SetFloat("hInput", Mathf.Abs(hInput));
         anim.SetBool("isGrounded", isGrounded);
 
+        //check for flipped and create some sort of algorithm to keep your sprite flipped properly.
 
-
-
-
-        //check for flipped and some sort of algorithm to keep your sprite flipped properly.
+        //if (hInput > 0 && sr.flipX || hInput < 0 && !sr.flipX)
+        //    sr.flipX = !sr.flipX;
 
         if (hInput != 0)
             sr.flipX = (hInput < 0);
@@ -153,5 +158,14 @@ public class playerController : MonoBehaviour
         rb.gravityScale = 5;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Squish"))
+        {
+            collision.gameObject.GetComponentInParent<EnemyWalker>().Squish();
 
-} 
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * jumpForce);
+        }
+    }
+}

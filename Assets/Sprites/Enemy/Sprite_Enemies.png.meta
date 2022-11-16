@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -2188,9 +2188,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 409
-        y: 536
+        y: 539
         width: 24
-        height: 26
+        height: 23
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2394,7 +2394,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemyProjectile 4
+      name: enemyProjectile
       rect:
         serializedVersion: 2
         x: 383
@@ -9912,7 +9912,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_467
+      name: KoopaDeath
       rect:
         serializedVersion: 2
         x: 250
@@ -10584,7 +10584,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Enemies_499
+      name: KoopaSquish
       rect:
         serializedVersion: 2
         x: 250
@@ -14573,6 +14573,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Sprite_Enemies_87
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 519
+        width: 1
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d45c2566e042b24a8e26d3f17ef497f
+      internalID: -711016000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -14684,7 +14705,6 @@ TextureImporter:
       Sprite_Enemies_122: -1039555785
       Sprite_Enemies_28: 246298627
       Sprite_Enemies_554: 2071241072
-      enemyProjectile 4: 1086763142
       Sprite_Enemies_528: 1121251190
       Sprite_Enemies_112: 2085662396
       Sprite_Enemies_442: 1085381674
@@ -14850,10 +14870,12 @@ TextureImporter:
       Sprite_Enemies_46: 1313002764
       Sprite_Enemies_147: 1623195403
       Sprite_Enemies_679: -544058244
+      Sprite_Enemies_87: -711016000
       Sprite_Enemies_72: -1126212405
       Sprite_Enemies_63: 146859364
       Sprite_Enemies_197: 522140266
       Sprite_Enemies_206: -806732959
+      enemyProjectile: 1086763142
       Sprite_Enemies_121: -2129632948
       Sprite_Enemies_416: -489596608
       Sprite_Enemies_570: -979211969
@@ -14918,9 +14940,9 @@ TextureImporter:
       Sprite_Enemies_270: -1000134819
       Sprite_Enemies_353: -428648703
       Sprite_Enemies_523: 1549311114
-      Sprite_Enemies_564: -1508847843
       Sprite_Enemies_678: -1868884998
       Sprite_Enemies_403: -1482344888
+      Sprite_Enemies_564: -1508847843
       Sprite_Enemies_171: 848431111
       Sprite_Enemies_236: 1668951885
       Sprite_Enemies_376: -961361770
@@ -14940,6 +14962,7 @@ TextureImporter:
       Sprite_Enemies_90: 252308614
       Sprite_Enemies_210: -225791071
       Sprite_Enemies_655: 181185489
+      KoopaDeath: 1382861976
       Sprite_Enemies_33: 1458551881
       Sprite_Enemies_379: -1431025593
       Sprite_Enemies_444: -1730699810
@@ -15008,6 +15031,7 @@ TextureImporter:
       Sprite_Enemies_508: -706140572
       Sprite_Enemies_172: -2088169133
       Sprite_Enemies_662: -1760118415
+      KoopaSquish: -1757662706
       Sprite_Enemies_173: 1400204474
       Sprite_Enemies_162: -1939572953
       Sprite_Enemies_273: -13463043
@@ -15098,7 +15122,6 @@ TextureImporter:
       Sprite_Enemies_12: 13682027
       Sprite_Enemies_132: 1726588067
       Sprite_Enemies_232: -1078580309
-      Sprite_Enemies_499: -1757662706
       Sprite_Enemies_448: 2124170871
       Sprite_Enemies_495: 761055828
       Sprite_Enemies_469: 321910766
@@ -15156,7 +15179,6 @@ TextureImporter:
       Sprite_Enemies_142: -124494298
       Sprite_Enemies_586: -1366301154
       Sprite_Enemies_371: 1578544739
-      Sprite_Enemies_467: 1382861976
       enemyProjectile 1: -1848937538
       Sprite_Enemies_139: -1046136905
       Sprite_Enemies_365: -1377555050
