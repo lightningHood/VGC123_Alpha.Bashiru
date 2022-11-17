@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         if (maxHeath <= 0)
-            maxHeath = 10;
+            maxHeath = 1;
 
         health = maxHeath;
     }

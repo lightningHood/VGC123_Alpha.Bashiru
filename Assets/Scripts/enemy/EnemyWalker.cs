@@ -39,7 +39,7 @@ public class EnemyWalker : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("barrier"))
+        if (collision.CompareTag("Barrier"))
         {
             sr.flipX = !sr.flipX;
         }
