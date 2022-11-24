@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
             if (_lives > value)
                 Respawn();
 
+            if (value < 0)
+                GameOver();
+
             _lives = value;
 
             if (_lives > maxLives)
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().name == "Level")
+            if (SceneManager.GetActiveScene().name == "Level"|| SceneManager.GetActiveScene().name =="GameOver")
             {
                 SceneManager.LoadScene(0);
                 playerInstance = null;
@@ -70,6 +73,8 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
             lives--;
+
+        
 
     }
 
@@ -87,11 +92,7 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        //go to game over here
-
-
-
-
-
+        
+            SceneManager.LoadScene(2);
     }
 }

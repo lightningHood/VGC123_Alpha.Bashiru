@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7125979045265312580}
   - component: {fileID: 7125979045265312583}
   - component: {fileID: 7125979045265312582}
-  - component: {fileID: 7125979045265312570}
+  - component: {fileID: 7206878660446926232}
   m_Layer: 0
   m_Name: yoshiCoin
   m_TagString: Untagged
@@ -133,7 +133,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7125979045265312570
+--- !u!114 &7206878660446926232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dee6b8971751484fb7ed1083e401fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPickup: 0
