@@ -113,11 +113,11 @@ public class CanvasManager : MonoBehaviour
                 //HINT
                 if (pauseMenu.activeSelf)
                 {
-                    //do something to pause
+                    Time.timeScale = 0;
                 }
                 else
                 {
-                    //do something to unpause
+                    Time.timeScale = 1;
                 }
             }
         }
