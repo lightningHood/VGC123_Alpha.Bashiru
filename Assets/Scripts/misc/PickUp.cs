@@ -9,11 +9,10 @@ public class PickUp : MonoBehaviour
         Powerup = 0,
         Life = 1,
         Score = 2
-
     }
 
     public PickupType currentPickup;
-
+    public AudioClip pickupSound;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -30,6 +29,9 @@ public class PickUp : MonoBehaviour
                     Debug.Log("Score was picked up");
                     break;
             }
+
+            if (pickupSound)
+                collision.gameObject.GetComponent<AudioSourceManager>().PlayOneShot(pickupSound, false);
 
             Destroy(gameObject);
         }

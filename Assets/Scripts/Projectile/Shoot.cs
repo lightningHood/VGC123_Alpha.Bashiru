@@ -6,8 +6,9 @@ using UnityEngine.Events;
 public class Shoot : MonoBehaviour
 {
     SpriteRenderer sr;
+    AudioSourceManager asm;
 
-    public float projectilespeed;
+    public float projectileSpeed;
     public Transform spawnPointRight;
     public Transform spawnPointLeft;
 
@@ -16,34 +17,36 @@ public class Shoot : MonoBehaviour
     public UnityEvent OnProjectileSpawned;
 
 
-
+    public AudioClip fireSound;
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        asm = GetComponent<AudioSourceManager>();
 
-
-        if (projectilespeed <= 0)
-            projectilespeed = 7.0f;
+        if (projectileSpeed <= 0)
+            projectileSpeed = 7.0f;
 
         if (!spawnPointLeft || !spawnPointRight || !projectilePrefab)
-            Debug.Log("please set default values on: " + gameObject.name);
+            Debug.Log("Please setup default values on: " + gameObject.name);
     }
 
     public void Fire()
     {
-        if (! sr.flipX)
+        if (!sr.flipX)
         {
-            Projectile curProjectile = Instantiate(projectilePrefab, spawnPointRight.position, 
-                spawnPointRight.rotation);
-            curProjectile.speed = projectilespeed;
+            Projectile curProjectile = Instantiate(projectilePrefab, spawnPointRight.position, spawnPointRight.rotation);
+            curProjectile.speed = projectileSpeed;
         }
         else
         {
-            Projectile curProjectile = Instantiate(projectilePrefab, spawnPointLeft.position,
-                spawnPointLeft.rotation);
-            curProjectile.speed = -projectilespeed;
+            Projectile curProjectile = Instantiate(projectilePrefab, spawnPointLeft.position, spawnPointLeft.rotation);
+            curProjectile.speed = -projectileSpeed;
         }
+
+        if (asm)
+            asm.PlayOneShot(fireSound, false);
+
+        OnProjectileSpawned?.Invoke();
     }
-  
 }

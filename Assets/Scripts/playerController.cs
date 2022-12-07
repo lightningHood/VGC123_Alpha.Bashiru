@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
+    AudioSourceManager asm;
 
     //movement stuff
     public float speed;
@@ -22,6 +23,11 @@ public class PlayerController : MonoBehaviour
 
     //variables
     Coroutine jumpForceChange;
+
+    //Audio Clips
+    public AudioClip jumpSound;
+    public AudioClip jumpAttackSound;
+    public AudioClip squishSound;
 
     public void StartJumpForceChange()
     {
@@ -54,6 +60,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        asm = GetComponent<AudioSourceManager>();
 
         if (speed <= 0)
         {
@@ -85,6 +92,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0.0f) return;
+
         AnimatorClipInfo[] curPlayingClip = anim.GetCurrentAnimatorClipInfo(0);
         float hInput = Input.GetAxisRaw("Horizontal");
 
@@ -107,11 +116,14 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce);
+
+            asm.PlayOneShot(jumpSound, false);
         }
 
         if (!isGrounded && Input.GetButtonDown("Jump"))
         {
             anim.SetTrigger("JumpAttack");
+            asm.PlayOneShot(jumpAttackSound, false);
         }
 
 
@@ -143,6 +155,9 @@ public class PlayerController : MonoBehaviour
 
             rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce);
+
+            if (squishSound)
+                asm.PlayOneShot(squishSound, false);
         }
 
         if (collision.CompareTag("Checkpoint"))
