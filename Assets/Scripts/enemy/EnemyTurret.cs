@@ -8,7 +8,8 @@ public class EnemyTurret : Enemy
     public float projectileFireRate;
     float timeSinceLastFire;
     Shoot shootScript;
-    
+    public AudioClip DeathSound;
+
 
     // Start is called before the first frame update
     public override void Start()
@@ -49,6 +50,7 @@ public class EnemyTurret : Enemy
 
     public override void Death()
     {
+        AudioSourceManager.instance.PlayOneShot(DeathSound, false);
         Destroy(gameObject);
     }
 

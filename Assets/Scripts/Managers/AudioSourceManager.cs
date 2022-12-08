@@ -7,8 +7,29 @@ public class AudioSourceManager : MonoBehaviour
 {
     List<AudioSource> currentAudioSources = new List<AudioSource>();
 
+    static AudioSourceManager _instance = null;
+
+    public static AudioSourceManager instance
+    {
+        get => _instance;
+        set { _instance = value; }
+    }
+
+
     public AudioMixerGroup sfxGroup;
     public AudioMixerGroup musicGroup;
+
+    void Awake()
+    {
+        if (_instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()

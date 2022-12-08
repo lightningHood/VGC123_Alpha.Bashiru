@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     public int maxLives = 5;
     private int _lives = 3;
 
+    public AudioClip gameOverSound;
+
+    public AudioClip respawnSound;
+
+
     public PlayerController playerPrefab;
     [HideInInspector] public PlayerController playerInstance = null;
     [HideInInspector] public Level currentLevel = null;
@@ -92,11 +97,12 @@ public class GameManager : MonoBehaviour
     {
         if (playerInstance)
             playerInstance.transform.position = currentSpawnPoint.position;
+        AudioSourceManager.instance.PlayOneShot(gameOverSound, false);
     }
 
     void GameOver()
     {
-        
-            SceneManager.LoadScene(2);
+        SceneManager.LoadScene(2);
+        AudioSourceManager.instance.PlayOneShot(gameOverSound, false );
     }
 }

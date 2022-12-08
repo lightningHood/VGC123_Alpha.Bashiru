@@ -146,10 +146,14 @@ public class CanvasManager : MonoBehaviour
                 if (pauseMenu.activeSelf)
                 {
                     Time.timeScale = 0;
+                    
+                    AudioListener.pause = true;
                 }
                 else
                 {
                     Time.timeScale = 1;
+                    
+                    AudioListener.pause = false;
                 }
             }
         }
